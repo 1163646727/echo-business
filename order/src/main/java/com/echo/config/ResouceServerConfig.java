@@ -27,15 +27,11 @@ public class ResouceServerConfig extends ResourceServerConfigurerAdapter {
     /** 设置订单服务的资源id为"order" ChenQi*/
     public static final String RESOURCE_ID = "order";
 
-/*    @Autowired
-    TokenStore tokenStore;*/
-
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) {
         resources.resourceId(RESOURCE_ID)//资源 id
                 /** 设置token校验，因为采用了JWT令牌格式，所以这里无需远程校验，本地校验即可 ChenQi*/
                 .tokenStore(tokenStore)
-                // .tokenServices(tokenService())//验证令牌的服务
                 .stateless(true);
     }
 
@@ -59,25 +55,5 @@ public class ResouceServerConfig extends ResourceServerConfigurerAdapter {
                 /** 设置session无效 ChenQi*/
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
-
-    /**
-     * methodName: tokenService <BR>
-     * description: 验证令牌的服务 <BR>
-     * remark: 资源服务令牌解析服务<BR>
-     * param:  <BR>
-     * return: org.springframework.security.oauth2.provider.token.ResourceServerTokenServices <BR>
-     * author: ChenQi <BR>
-     * createDate: 2020-07-05 14:46 <BR>
-     */
-/*    @Bean
-    public ResourceServerTokenServices tokenService() {
-        //使用远程服务请求授权服务器校验token,必须指定校验token 的url、client_id，client_secret
-        RemoteTokenServices service=new RemoteTokenServices();
-        // 设置验证令牌的地址 ChenQi
-        service.setCheckTokenEndpointUrl("http://localhost:53020/auth/oauth/check_token");
-        service.setClientId("c1");
-        service.setClientSecret("secret");
-        return service;
-    }*/
 
 }

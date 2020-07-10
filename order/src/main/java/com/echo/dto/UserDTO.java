@@ -3,7 +3,11 @@ package com.echo.dto;
 import lombok.Data;
 
 /**
- * 用户信息
+ * className: UserDTO <BR>
+ * description: 用户信息<BR>
+ * remark: <BR>
+ * author: ChenQi <BR>
+ * createDate: 2020-07-10 14:28 <BR>
  */
 @Data
 public class UserDTO {
