@@ -1,6 +1,8 @@
 package com.echo.controller;
 
 import com.echo.dto.UserDTO;
+import com.echo.remote.ServiceARemote;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class OrderController {
+
+    @Autowired
+    private ServiceARemote serviceARemote;
 
     @GetMapping(value = "/r1")
     @PreAuthorize("hasAuthority('p1')")//拥有p1权限方可访问此url
@@ -48,6 +53,11 @@ public class OrderController {
         UserDTO  userDTO = (UserDTO) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         // return (StringUtils.isBlank(userDTO.getFullname()) ? "匿名" : userDTO.getFullname())+"访问资源3";
         return (userDTO.getFullname() == null ? "匿名" : userDTO.getFullname())+"访问资源3";
+    }
+
+    @GetMapping(value = "/remoteServiceA")
+    public String remoteServiceA(){
+        return serviceARemote.remote();
     }
 
 }

@@ -18,4 +18,19 @@ public class ServiceController {
     public String r1(){
         return "serviceA的r1资源";
     }
+
+    /**
+     * methodName: remote <BR>
+     * description: 测试微服务调用<BR>
+     * remark: <BR>
+     * param:  <BR>
+     * return: java.lang.String <BR>
+     * author: ChenQi <BR>
+     * createDate: 2020-07-13 16:11 <BR>
+     */
+    @GetMapping(value = "/remote")
+    public String remote(){
+        return "serviceA的remote资源。";
+    }
+
 }
