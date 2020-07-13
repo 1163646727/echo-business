@@ -1,5 +1,6 @@
 package com.echo;
 
+import com.echo.utils.CommonTest;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -13,4 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Test1 {
 
 
+    @Autowired
+    private CommonTest commonTest;
 }

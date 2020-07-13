@@ -26,6 +26,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+        <!-- 依赖echo-business-->
+        <dependency>
+            <groupId>com.echo</groupId>
+            <artifactId>businessCommon</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>
