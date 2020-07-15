@@ -53,18 +53,6 @@
                 <version>1.2.47</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.18.0</version>
-            </dependency>
-            <!--mysql 依赖-->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.47</version>
-            </dependency>
-
             <!--spring-security-jwt令牌  依赖-->
             <dependency>
                 <groupId>org.springframework.security</groupId>
@@ -96,9 +84,23 @@
                 <scope>import</scope>
             </dependency>
 
-
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.0</version>
+        </dependency>
+        <!--mysql 依赖-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.47</version>
+        </dependency>
+
+    </dependencies>
 
     <build>
         <finalName>${project.name}</finalName>
