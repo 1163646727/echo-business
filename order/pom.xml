@@ -11,23 +11,12 @@
 
     <artifactId>order</artifactId>
 
-
     <dependencies>
         <!-- 依赖echo-business-->
         <dependency>
             <groupId>com.echo</groupId>
             <artifactId>businessCommon</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <!--alibaba nacos依赖 -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -46,16 +35,6 @@
         <dependency>
             <groupId>javax.interceptor</groupId>
             <artifactId>javax.interceptor-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
 
     </dependencies>
