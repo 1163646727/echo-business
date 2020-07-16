@@ -6,6 +6,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -132,5 +135,21 @@ public class JpaTest {
         for (User user : list) {
         System.out.println(user.getName());
         }
+    }
+
+    /**
+     * methodName: findAllPage <BR>
+     * description: SpringDataJpa 分页查询测试<BR>
+     * remark: <BR>
+     * param:  <BR>
+     * return: void <BR>
+     * author: ChenQi <BR>
+     * createDate: 2020-07-16 15:27 <BR>
+     */
+    @Test
+    public void findAllPage() throws Exception {
+        Pageable pageable = new PageRequest(1,3);
+        Page<User> pageList = userDao.findAll(pageable);
+        System.out.println(pageList);
     }
 }

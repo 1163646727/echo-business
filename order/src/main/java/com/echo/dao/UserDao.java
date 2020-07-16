@@ -1,5 +1,8 @@
 package com.echo.dao;
 import com.echo.entity.User;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -36,4 +39,7 @@ public interface UserDao extends JpaRepository<User,Long> {
      */
     @Query(value = "select id,name,age from t_user  where name= :name",nativeQuery = true)
     List<User> findQuery(@Param("name") String name);
+
+    /** 分页查询 ChenQi*/
+    Page<User> findAll(Pageable  pageable);
 }
