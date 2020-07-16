@@ -27,10 +27,17 @@
     from sys_user
     where id = #{id,jdbcType=BIGINT}
   </select>
-    <!-- 根据用户名和密码查询 -->
-    <select id="selectByNameAndPassword" parameterType="com.echo.entity.SysUser" resultType="com.echo.entity.SysUser"  >
-        select * from sys_user where nid = #{nid} and username=#{username} and password= #{password}
-    </select>
+
+  <!-- 根据用户名和密码查询 -->
+  <select id="selectByNameAndPassword" parameterType="com.echo.entity.SysUser" resultType="com.echo.entity.SysUser"  >
+      select * from sys_user where nid = #{nid} and username=#{username} and password= #{password}
+  </select>
+
+  <!-- 查询全部用户 -->
+  <select id="selectAll" resultType="com.echo.entity.SysUser"  >
+    select * from sys_user
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from sys_user
     where id = #{id,jdbcType=BIGINT}

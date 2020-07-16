@@ -3,6 +3,8 @@ package com.echo.mapper;
 
 import com.echo.entity.SysUser;
 
+import java.util.List;
+
 /**
  * @ClassName:      SysUserMapper
  * @Description:    系统用户
@@ -24,4 +26,7 @@ public interface SysUserMapper {
 
    /**ChenQi 2019/4/28;  根据用户名和密码查询*/
     SysUser selectByNameAndPassword(SysUser sysUser);
+
+    /** 查询全部用户 ChenQi*/
+    List<SysUser> selectAll();
 }
