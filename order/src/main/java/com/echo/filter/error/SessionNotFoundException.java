@@ -4,10 +4,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @ClassName:      SessionNotFoundException
- * @Description:    全局异常类：会话找不到
- * @Author:         ChenQi
- * @CreateDate:     2019/4/25 19:53
+ * ClassName:      SessionNotFoundException
+ * Description:    全局异常类：会话找不到
+ * Author:         ChenQi
+ * CreateDate:     2019/4/25 19:53
  */
 public class SessionNotFoundException extends Exception {
    @Getter

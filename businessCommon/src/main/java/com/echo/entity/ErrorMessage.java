@@ -6,11 +6,11 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * @ClassName:      ErrorMessage
- * @Description:    全局异常捕捉实体类
- *                  实体用于记录具体的 异常信息，并响应 客户端
- * @Author:         ChenQi
- * @CreateDate:     2019/4/25 19:51
+ * className: ErrorMessage <BR>
+ * description: 全局异常捕捉实体类<BR>
+ * remark: 实体用于记录具体的 异常信息，并响应 客户端<BR>
+ * author: ChenQi <BR>
+ * createDate: 2020-07-16 15:58 <BR>
  */
 @NoArgsConstructor
 @Setter

@@ -11,16 +11,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @ClassName:      GlobalExceptionHandler
- * @Description:    全局异常通知类
+ * ClassName:      GlobalExceptionHandler
+ * Description:    全局异常通知类
  *                    指定了 3 个 特定 的异常处理器和 1 个 默认 的异常处理器。
  *                    当请求处理出现异常时，会根据 异常处理器的配置顺序依次尝试异常匹配和处理。
  *                    当异常不在 SessionNotFoundException、NullOrEmptyException、IllegalPropertiesException 中时，
  *                    Spring 会委托 默认 的 exceptionHandler 进行处理。
  *                    小结:使用 @ControllerAdvice 处理异常也有一定的 局限性。只有进入 Controller 层的错误，才会由 @ControllerAdvice 处理。
  *                    拦截器抛出的错误以及访问错误地址的情况@ControllerAdvice 处理不了，由Spring Boot默认的异常处理机制 处理。
- * @Author:         ChenQi
- * @CreateDate:     2019/4/25 19:56
+ * Author:         ChenQi
+ * CreateDate:     2019/4/25 19:56
  */
 @ControllerAdvice
 @Slf4j
