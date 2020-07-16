@@ -1,5 +1,6 @@
 package com.echo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -13,6 +14,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * date: 2020/7/5 9:45 <BR>
  * version 1.0 jdk1.8 <BR>
  */
+@MapperScan(basePackages = {"com.echo.mapper","com.echo.dao"})
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
