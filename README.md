@@ -5,6 +5,22 @@
 echo-business是微服务项目，公共代码或页面，统一管理在businessCommon中；order项目中集成Spring Cloud Security Oauth2认证服务，可供参考。
 
 # 一. order服务
+## 创建基础数据表
+建表文件：`1.db/project.sql`
+## 修改配置文件
+`application.properties` 
+## 测试
+### 普通请求
+postman工具 
+get请求  
+`http://localhost:9443/order/r1` 
+需要将taoken放到Headers中，key：`Authorization`，value：`Bearer `+`token`,注意：`Bearer `这个有一个空格。 
+
+### 调用serviceA的资源
+postman工具 
+get请求 
+    `http://localhost:9443/order/remoteServiceA`  
+
 ## 集成Spring Cloud Security Oauth2认证服务   
 Oauth的配置比较复杂，概况有下面这些范围：  
 1. 资源服务  
