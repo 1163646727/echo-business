@@ -23,6 +23,12 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <modules>
+        <module>businessCommon</module>
+        <module>order</module>
+        <module>serviceA</module>
+    </modules>
+
     <dependencyManagement>
         <dependencies>
             <!--spring-cloud 依赖-->
@@ -125,13 +131,13 @@
     </dependencies>
 
 
-<!--    <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-    </build>-->
+    </build>
 
 </project>
