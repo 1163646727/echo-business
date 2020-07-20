@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * date: 2020/7/13 16:53 <BR>
  * version 1.0 jdk1.8 <BR>
  */
-@FeignClient(name = "serverA")
+@FeignClient(name = "serviceA")
 public interface ServiceARemote {
 
     @GetMapping(value = "/serverA/remote")
