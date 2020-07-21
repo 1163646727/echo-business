@@ -41,6 +41,12 @@
             <version>1.0.10.RELEASE</version>
         </dependency>
 
+        <!--mq依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

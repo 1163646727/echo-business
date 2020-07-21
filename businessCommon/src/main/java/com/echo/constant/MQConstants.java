@@ -13,12 +13,12 @@ public class MQConstants {
     public static final String EX_SCLOUD = "ex_scloud";
 
     /** 交换机 ChenQi*/
-    public static final String EXCHANGE_HISDATA_RASS = "ex_hisdata_rass";
+    public static final String EXCHANGE_ECHO = "ex_echo";
 
     /** 队列 ChenQi*/
-    public static final String QUEUE_HISDATA_UPDATEDICT = "queue_hisdata_updateDict";
+    public static final String QUEUE_ECHO = "queue_echo";
 
     /** 路由键 ChenQi*/
-    public static final String ROUTE_KEY_UPDATEDICT = "updateDict";
+    public static final String ROUTE_KEY_ECHO = "echo";
 
 }
