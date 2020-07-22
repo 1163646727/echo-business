@@ -2,7 +2,6 @@ package com.echo.config;
 
 import com.echo.constant.MQConstants;
 import org.springframework.amqp.core.*;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 
@@ -20,7 +19,8 @@ public class MQConfig {
     /** 声明交换机 ChenQi*/
     @Bean
     public Exchange echoExchange(){
-        return ExchangeBuilder.topicExchange(MQConstants.EXCHANGE_ECHO).durable(true).build();
+        /** directExchange 表示路由交换机 ChenQi*/
+        return ExchangeBuilder.directExchange(MQConstants.EXCHANGE_ECHO).durable(true).build();
     }
 
     /** 声明队列 ChenQi*/

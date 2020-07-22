@@ -27,6 +27,6 @@ public class EchoMQDemoListener {
      */
     @RabbitListener(queues = MQConstants.QUEUE_ECHO)
     public void msg(String msg){
-        System.out.println("消费者消费消息了："+msg);
-    }
+        System.out.println("*************************消费者消费消息了："+msg);
+}
 }
