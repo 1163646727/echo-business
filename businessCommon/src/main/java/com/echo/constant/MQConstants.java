@@ -19,6 +19,6 @@ public class MQConstants {
     public static final String QUEUE_ECHO = "queue_echo";
 
     /** 路由键 ChenQi*/
-    public static final String ROUTE_KEY_ECHO = "echo";
+    public static final String ROUTE_KEY_ECHO = "route_echo";
 
 }

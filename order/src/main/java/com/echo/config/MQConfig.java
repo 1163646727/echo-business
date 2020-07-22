@@ -1,6 +1,10 @@
 package com.echo.config;
 
+import com.echo.constant.MQConstants;
+import org.springframework.amqp.core.*;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Bean;
 
 /**
  * className: MQConfig <BR>
@@ -14,8 +18,23 @@ import org.springframework.beans.factory.annotation.Configurable;
 public class MQConfig {
 
     /** 声明交换机 ChenQi*/
+    @Bean
+    public Exchange echoExchange(){
+        return ExchangeBuilder.topicExchange(MQConstants.EXCHANGE_ECHO).durable(true).build();
+    }
 
     /** 声明队列 ChenQi*/
+    @Bean
+    public Queue echoQueue() {
+        Queue queue = new Queue(MQConstants.QUEUE_ECHO);
+        return queue;
+    }
 
     /** 绑定队列和交换机 ChenQi*/
+    @Bean
+    public Binding bindNursePlan() {
+        Binding binding = BindingBuilder.bind(echoQueue()).to(echoExchange())
+                .with(MQConstants.ROUTE_KEY_ECHO).noargs();
+        return binding;
+    }
 }

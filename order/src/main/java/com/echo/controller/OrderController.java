@@ -79,6 +79,7 @@ public class OrderController {
      */
     @GetMapping(value = "/sendMsg")
     public String sendMsg(@RequestParam String msg){
+        System.out.println("*******************发送MQ消息***************");
         rabbitTemplate.convertAndSend(MQConstants.EXCHANGE_ECHO,MQConstants.ROUTE_KEY_ECHO,msg);
         return "发送消息成功!";
     }
