@@ -1,6 +1,7 @@
 package com.echo.controller;
 
 import com.echo.constant.MQConstants;
+import com.echo.dto.CommResp;
 import com.echo.dto.UserDTO;
 import com.echo.remote.ServiceARemote;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -78,10 +79,10 @@ public class OrderController {
      * createDate: 2020-07-21 10:37 <BR>
      */
     @GetMapping(value = "/sendMsg")
-    public String sendMsg(@RequestParam String msg,String key){
+    public CommResp sendMsg(@RequestParam String msg, String key){
         System.out.println("*******************发送MQ消息***************");
         rabbitTemplate.convertAndSend(MQConstants.EXCHANGE_ECHO,key,msg);
-        return "发送消息成功!";
+        return CommResp.defaultResp ();
     }
 
 }
