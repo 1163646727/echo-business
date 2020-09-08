@@ -14,9 +14,11 @@ public class MQConstants {
 
     /** 交换机 ChenQi*/
     public static final String EXCHANGE_ECHO = "ex_echo";
+    public static final String EXCHANGE_ECHO_TEST = "ex_echo_test";
 
     /** 队列 ChenQi*/
     public static final String QUEUE_ECHO = "queue_echo";
+    public static final String QUEUE_ECHO_TEST = "queue_echo_test";
 
     /** 路由键 ChenQi*/
     public static final String ROUTE_KEY_ECHO = "route_echo";
